@@ -38,6 +38,12 @@ describe("proxy", () => {
     expect(proxy(new NextRequest("http://localhost/case/plan")).status).toBe(503);
   });
 
+  it("stays open locally even when pulled Vercel development variables are present", () => {
+    delete process.env.PILOT_CODES;
+    process.env.VERCEL_ENV = "development";
+    expect(proxy(new NextRequest("http://localhost/case/plan")).status).toBe(200);
+  });
+
   it("exempts only the access page and its form handler", () => {
     process.env.PILOT_CODES = "abc123:vet-01";
     expect(proxy(new NextRequest("http://localhost/access")).headers.get("location")).toBeNull();
