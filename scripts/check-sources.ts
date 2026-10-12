@@ -5,14 +5,14 @@ import type { Source, SourceStatus, StatusMap } from "../lib/engine/types";
 import { KB } from "../lib/kb";
 import { missingExcerpts } from "../lib/sources/excerpts";
 import { extractHtmlText, extractPdfText } from "../lib/sources/extract";
-import { USER_AGENT } from "../lib/sources/fetch";
+import { fetchSource } from "../lib/sources/fetch";
 
 const DATA = path.join(__dirname, "..", "data");
 const STATUS_FILE = path.join(DATA, "status.json");
 const SNAPSHOTS = path.join(DATA, "snapshots");
 
 async function fetchText(source: Source): Promise<string> {
-  const res = await fetch(source.url, { headers: { "user-agent": USER_AGENT }, signal: AbortSignal.timeout(30_000) });
+  const res = await fetchSource(source.url);
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   if (source.format === "pdf") return extractPdfText(new Uint8Array(await res.arrayBuffer()));
   const body = await res.text();
