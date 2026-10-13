@@ -1,9 +1,9 @@
-Import dogs and cats into Japan (from non-designated regions)
-To import dogs and cats from non-designated regions, they must meet import requirements such as microchip implanting, rabies vaccination at least twice, rabies antibody test, and 180-day waiting.
-And you need to obtain certificates, which certify necessary information, issued by the government agency of the exporting country.
+Import dogs and cats into Japan from non-designated regions
+To import dogs and cats from other than the designated regions, the animals must meet import requirements such as microchip implanting, rabies vaccination at least twice, rabies antibody testing and a 180-day waiting.
+And you need to obtain certificates, which certify necessary information, issued by the government authorities of the exporting country.
 Import guide
 In the beginning, please read the import guide.
-Import guide (Non-designated regions)
+Import guide (non-designated regions)
 English(PDF : 497KB)
 中文/Chinese(PDF : 522KB)
 Korean(PDF : 667KB)
@@ -20,156 +20,152 @@ If our microchip reader cannot read the non-ISO microchip, you need to prepare a
 Microchip numbers starting with "900 202" are currently under investigation for their validity. Please note that for the time being, these microchips will not be accepted as a means of identification. (Apr. 7, 2023)
 There have been cases where microchips with the same identification number were implanted into different animals.
 In such cases, it may be necessary to re-implant a new microchip and redo the required procedures.
-Therefore, once the timing of importation is decided, please promptly submit the notification for import to the Animal Quarantine Service that has jurisdiction over the airport of arrival. (Dec. 19, 2025)
+Therefore, once the timing of importation is decided, please promptly notify Animal Quarantine Service that has jurisdiction over the airport of arrival. (Dec. 19, 2025)
 Example: Microchip numbers starting with “900”, especially those starting with“900113”, “900115”, “900128”, “900201”, “900215”, “900217” and “900263”.
 F.A.Q. about microchip is here
 Step 2 Rabies vaccinations (twice or more)
 Dogs and cats must be vaccinated against rabies twice or more after the microchip implanting. Please also check the animal's microchip number.
 （Timing of rabies vaccination）
 First rabies vaccination
-At least 91days old at the time of vaccination （the date of birth is counted as day 0）
+At least 91 days old at the time of vaccination （the date of birth is counted as day 0）
 After the microchip implanting （including the same day of implanting）
 Second rabies vaccination
-30 days or more apart from the first vaccination (the date of the first one is counted as day 0)
+Total 30 days or more apart from the first vaccination (the date of the first one is counted as day 0)
 Within the effective period of the first vaccination
 ＊Effective period is not the expiration date for use of the vaccine, but the duration of immunity.
 （Acceptable vaccines）
 Inactivated (killed) virus vaccine or recombinant / modified vaccine
-Rabies RNA vaccines are reported to be used in some countries outside of Japan.
-Please note that this type of vaccine is not accepted for the importation of dogs and cats into Japan. Be sure to check the type of rabies vaccine used.
 （Precautions）
-If the effective period of the rabies vaccination will expire before arrival in Japan, an additional rabies vaccination must be administered within the period.
+If the effective period of the rabies vaccination expires before arrival in Japan, an additional rabies vaccination must be administered within the period.
 The rabies vaccination administered after the effective period of the previous one is not accepted as an ‘additional vaccination’. The importer must start the procedures from the first rabies vaccination.
 Rabies vaccination conducted before microchip implantation is invalid, but it may be accepted under certain conditions（PDF：190KB）.
-Live virus vaccine and RNA vaccine are not accepted.
-In some countries, first rabies vaccination can be given at 12 weeks old (84 days - 90 days old) or older, but in Japanese regulation, vaccinated under 91 days old is invalid.
+In other countries, first rabies vaccine can be administered from 12 weeks (84-90 days) old, but under Japanese regulation, first rabies vaccination under 91 days old is invalid.
+Rabies RNA vaccine and live virus vaccine, used outside of Japan, are not accepted for the importation of dogs and cats into Japan. Make sure to check the type of rabies vaccine.
 F.A.Q. about rabies vaccinations is here
 Step 3 Rabies antibody test (serological test)
 Rabies antibody test must be performed at one of the designated laboratories.
 A blood sample for the test must be drawn after the second rabies vaccination. Please also check the animal's microchip number.
 (The second rabies vaccination and blood sampling can be performed on the same day.)
-List of the designated laboratories is here.
 Antibody titer against rabies must be equal to or greater than 0.5 IU/ml.
 The test result is valid for 2 years from the date of blood sampling.
 （Precautions）
 The blood sample must be drawn within the effective period of the rabies vaccination.
 We will check the result report of the antibody test at the time of import inspection.
 If there is no designated laboratory in your country, you need to send the blood sample to one of the designated laboratories in other countries.
-If you send a dog’s blood sample to the designated laboratory in Japan, it must be accompanied by an inspection certificate issued by the government agency of exporting country.
-You can use the recommended certification form for serum of dog(s). PDF（PDF：105KB） , Word（Word：123KB）
-In order to ensure proper import inspections of sent items, make sure the international mail service fills out dog serum on the declaration form attached to the international mailing items and clearly indicates the contents of parcels being sent on their outer packaging (example label: "Animal Quarantine Required(PDF : 534KB)").
-If you send dog’s or cat’s blood sample to a designated laboratory in other country, please make sure export and import procedures of each country in advance.
+If you send a dog’s blood sample to the designated laboratory in Japan, it must be accompanied by a health certificate issued by the government authorities of the exporting country.
+A recommended model certificate for export of dog(s) serum to Japan. PDF（PDF：105KB） , Word（Word：123KB）
+If you send the sample by international mail service, make sure to accompany the above certificate; indicate contents of the parcel as "dog serum" and label the parcel with "Animal Quarantine is Required(PDF : 534KB)".
+If you send a dog or cat’s blood sample to a designated laboratory in other country, please check the export and import procedures of each country in advance.
 As to how to apply for the antibody test, please ask the designated laboratory which you use.
-If the antibody titer is less than 0.5 IU/ml, the dog or cat must be retested.
+If the antibody titer is less than 0.5 IU/ml, the dog or cat needs to be retested.
 F.A.Q. about rabies antibody test is here
-Step 4 Waiting period (180 days or more)
-Dogs and cats are required to arrive in Japan after 180 days have passed from the date of blood sampling for the rabies antibody test.
+Step 4 A waiting period (180 days or more)
+Dogs and cats are required to arrive in Japan after 180 days have passed from the date of blood sampling for the rabies antibody test. (The date of blood sampling is counted as day 0).
 In addition, the arrival date in Japan must be within ‘the expiry period of the rabies vaccine administered’ and ‘the validity period of the rabies antibody test (2 years from the date of blood sampling)’.
-(The date of blood sampling is counted as day 0).
 （Precautions）
 If validity period for antibody testing has expired,
-there is no need to repeat waiting process, as long as the rabies vaccination are continuously administered within the expiry period, and another valid antibody test result is obtained for the planned arrival.
+there is no need to repeat waiting process, as long as the rabies vaccination are continuously administered within the effectiveexpiry period, and another valid antibody test result is obtained for the planned arrival.
 It is not a must to continue antibody testing every two years.
 Three conditions to be met are:
 The effective period from the first rabies vaccination continues until arrival in Japan with necessary additional rabies vaccinations.
 The date of blood sampling for the updated test is at least 180 days after the date of blood sampling for the first rabies antibody test.
 The tested antibody titer is 0.5 IU/ml or more.
-Dogs and cats whose waiting has passed less than 180 days will be subject to quarantine at a detention facility of Animal Quarantine Service for the period to make up the shortage. But it is strongly recommended for your pet to finalize the waiting period before arrival.
-F.A.Q. about waiting period is here
+Dogs and cats whose waiting has passed less than 180 days is detained for quarantine at a facility of Animal Quarantine Service for the period to make up the shortage. But it is strongly recommended for your pet to finalize the waiting period before arrival.
+F.A.Q. about a waiting period is here
 Step 5 Advance notification
 ＜Advance notification＞
 Applicants must notify Animal Quarantine Service at the expected port of entry not less than 40 days before arrival in Japan.
-Notification can be made online through the NACCS.
-Or you can submit the notification form by e-mail.
+Notification is made online through the NACCS.
+If you find difficulties, you may submit the notification form by e-mail.
 Notification form for dogs（PDF：139KB） (EXCEL : 55KB)
 Notification form for cats（PDF：137KB） (EXCEL : 55KB)
 How to fill in the notification(Non-designated regions)(PDF：751KB)
-Contact list of Animal Quarantine Service at airport or seaport
-＜Approval of Import Inspection of Animals＞
-Animal Quarantine Service will examine the "Notification" and related documents to issue an “Approval of Import Inspection of Animals”. For export or boarding procedures, please print or save digitally the issued form.
+List of Animal Quarantine Service at airports and seaports
+＜Approval of import inspection of animals＞
+Animal Quarantine Service examines the notification and other attesting documents and issues an "approval for import inspection of animals".
+Print or digitally save the "approval" and indicate it upon request, if any, when applying for an official export certificate or boarding an airplane.
 ＜Modification on notification＞
-In case of any changes in the notification, you need to submit a ‘Modification on Notification of Import of Animals’ by e-mail to Animal Quarantine Service.
-Modification on Notification of Import of Animals（PDF：56KB） (EXCEL : 15KB)
-In case you submitted the notification via NACCS, modification must be made through NACCS.
+In case of any changes in the notification, modify it through NACCS or submit a ‘modification on notification of import of animals’ by e-mail to the Animal Quarantine Service.
+Notification via NACCS needs to be modified through NACCS.
+Modification on notification of import of animals（PDF：56KB） (EXCEL : 15KB)
 （Precautions）
 Dogs can enter Japan only through the designated airports and seaports.
 In principle, a notification submitted less than 40 days before arrival in Japan is not accepted.
-Please submit copy of some documents (e.g. result report of rabies antibody test, export quarantine certificate if the dog or cat has been exported from Japan) with the advance notification to facilitate procedures.
-Modifications of ‘moving up arrival date after submitting the notification’, ‘increasing the number of heads’, ‘replacing with different animals’, and ‘any change after the scheduled arrival date’ are not accepted in principle.
-If there are any unclear points or deficiencies in the notification, we may not issue the Approval form.
+Please also submit a copy of attesting documents such as a report of rabies antibody testing report and an export quarantine certificate if the dog or cat has been exported from Japan, to facilitate procedures.
+Modifications of ‘moving up arrival date after submitting the notification’, ‘increasing the number of heads’, ‘replacing with different animals’, and ‘any change after the scheduled arrival date’ are not acceptable.
+If there are any unclear points or deficiencies in the notification, we may not issue an approval.
 In case that the detention facility is fully occupied, you may need to change the arrival date or the port of entry.
 F.A.Q. about advance notification is here
-（Monitoring survey for rabies antibody）
-We carry out monitoring survey to verify import quarantine system at Narita international airport, Haneda airport, Chubu international airport, and Kansai international airport.
-If your dog is randomly selected for the subject, we will announce you about it.
+（A survey for rabies antibody）
+We carry out a survey to verify import quarantine system at Narita, Haneda, Chubu and Kansai Intl. airports.
+If your dog is randomly selected for the subject, we will announce you.
 Step 6 Clinical inspection before departure (pre-export inspection)
 Before leaving the exporting country (within 10 days before boarding), dogs and cats must undergo a clinical inspection by a veterinarian. Please also check the animal's microchip number.
 （Contents of clinical inspection）
 The dogs and cats have been found to be free from any clinical signs of rabies.
 In case of dogs, also the dogs have been found to be free from any clinical signs of leptospirosis.
-Step 7 Obtaining certificates issued by the government agency of the exporting country
-Applicants must obtain certificates issued by the government agency (corresponding to Animal Quarantine service in Japan) of the exporting country.
+Step 7 Obtaining certificates issued by the government authorities of the exporting country
+Applicants must obtain certificates issued by the government authorities of the exporting country (corresponding to Animal Quarantine Service in Japan).
 （Required information in the certificates）
 （1）Individual information （including date of birth or age）
-（2）Microchip number and date of implanting ［→Step 1］
-（3）Date of rabies vaccinations, effective period, kind of vaccine, product name and manufacturer of vaccine ［→Step 2］
-（4）Date of blood sampling for a rabies antibody test, antibody titer, and name of designated laboratory［→Step3］
-（5）Result and date of clinical inspection （pre-export inspection） ［→Step 6］
-Using the recommended certification form (Form AC) makes it possible for the importer to fill in the required information without any omissions.
+（2）Microchip number and implanting date ［→Step 1］
+（3）Date of rabies vaccinations, effective periods, kinds of vaccine, product names and manufacturers of vaccine ［→Step 2］
+（4）Date of blood sampling for a rabies antibody test, antibody titer, and name of the designated laboratory［→Step3］
+（5）Result and date of clinical inspection（pre-export inspection） ［→Step 6］
+By using a recommended certification form (Form AC), it possible to fill in the required information without any omissions.
 Form AC(PDF : 75KB) EXCEL (36KB)
 ATTACH(PDF : 53KB) EXCEL (29KB)
 Sample(Form AC) (PDF : 218KB)
 (How to fill out Form AC)
-1. The private veterinarian fills in the Form AC. And then you must obtain the Endorsment by the official government veterinarian.
-2. However the official government veterinarian also can fill in the FormAC. Due to circumstance in the exporting country as long as the FormAC is filled in the required information and endorsed. Please draw items and fill date.
+1. The private veterinarian fills in the Form AC. Then it must be endorsed by the government authorities of the exporting country. In some countries, the government veterinarian would both fill in the Form AC and issue the certificate.
+2. Be sure to have all the blanks of Form AC to be filled and endorsed/certified by the goverment authorities of the exporting country.
 3．If you need more pages, fill in the ATTACH form in a same manner, and attach it to Form AC.
-Health certificates that must be submitted to the Animal Quarantine Service can be submitted in the current way or if the government agency of the exporting country notifies in advance that an electromagnetic records of health certificates will be created, electromagnetic records may be used instead.(from December 1, 2022)
-Health certificates obtained by electromagnetic records is permitted when the required information is stated on the health certificate records or of its copy, and when it is confirmed that it has been issued by the government agency of the exporting country.
-For futher information, please contact Animal Quarantine Service.
+The original health certificates must be submitted to the Animal Quarantine Service.
+Health certificates in the form of electromagnetic records are acceptable from USA, Brazil and Spain when the required information is stated on the health certificate records or of its copy, and when it has been confirmed that it has been issued by the government authorities of the exporting country.
 （Precautions）
 Do not use pencils or erasable ink to fill in the certificates.
 Use of correcting fluid or correction tape is not acceptable.
-If there are any deficiencies in the certificates, the dog or cat will be subject to detention quarantine for up to 180 days or will be shipped back . In order to prevent any errors in the certificates, we recommend you to send copy of the certificates to us in advance so that we check them.
+If there are any deficiencies in the certificates, the dog or cat is detained for quarantine up to 180 days or will be shipped back. In order to prevent any errors in the certificates, we recommend you to send a copy of the certificates to us in advance so that we check them.
 F.A.Q. about obtaining certificates is here
 Step 8 Import inspection
 Dogs and cats must be inspected by Animal Quarantine Service upon arrival in Japan.
-Importer must apply for import inspection to Animal Quarantine Service upon arrival in Japan.
-If no problems are found in the import inspection, we will issue an import quarantine certificate for the dog or cat.
-In case that the dog or cat doesn’t meet import requirements, it will be subject detention quarantine for up to 180 days or will be returned .
+Importer must bring the animal in the crate or carrier to Animal Quarantine Service (AQS) upon arrival in Japan and apply for import inspection.
+The AQS issues an import quarantine certificate once inspection of the animal is completed.
+In case that the dog or cat doesn’t meet import requirements, it will be detained for quarantine up to 180 days or shipped back.
 （Necessary documents）
-Certificates issued by the government agency of the exporting country (original) 【→Step 7】
-Result report of the rabies antibody test 【→Step 3】
-Application for Import Inspection (you can use online system ‘NACCS’)
+Original certificates issued by the government authorities of the exporting country【→Step 7】
+A report of the rabies antibody testing result 【→Step 3】
+An application for import inspection (online through ‘NACCS’ or through the following form)
 Application form for dogs（PDF：103KB） (EXCEL : 46KB)
 Application form for cats（PDF：103KB） (EXCEL : 53KB)
-(For cargo transportation) : A copy of Air Waybill or Bill of lading
-Power of attorney （If an agent, other than a customs broker, carry out the import procedures instead of the owner）
-Example of power of attorney（PDF：185KB）
+(For cargo transportation) : A copy of Air Waybill or Bill of Lading
+Power of attorney(Click Here for Details)
+An example of power of attorney
 Other documents that Animal Quarantine Service requires
-Detention quarantine inspection
-Dogs and cats which don’t meet import requirements including certification deficiency will be subject to quarantine at a detention facility of Animal Quarantine Service for the necessary period (up to 180 days).
+Detention for quarantine
+Dogs and cats which don’t meet import requirements including certification deficiency are detained for quarantine at the facility of Animal Quarantine Service (AQS) for the necessary period, up to 180 days.
 The importer is responsible for caretaking, feeding, and all the costs during quarantine.
 The importer can entrust the caretaking and feeding duties to a caretaker company at your expense.
-Detention facilities where a caretaking company is stationed: Narita branch, Haneda Airport branch, and Kansai Airport branch.
+Detention facilities where a caretaking company is stationed are that of AQS in Narita, Haneda and Kansai airports.
 （Precautions）
-During quarantine, dogs and cats cannot be brought out of the detention facility under any circumstances, except when the dog or cat is returned to the exporting country.
-If necessary, a veterinarian can visit at the detention facility for medical treatments.
+During quarantine, dogs and cats cannot be brought out from the detention facility under any circumstances, except when the dog or cat is shipped back to the exporting country.
+If necessary, a veterinarian can visit the detention facility for medical treatments.
 Visiting your dog or cat during quarantine is allowed, but the visiting hours and visitors are restricted.
 If symptoms of rabies or, for dogs, leptospirosis is observed, the quarantine period may be extended and some additional examinations may be conducted.
-For dogs and cats scheduled to be subject to detention quarantine, vaccinations (combination vaccine) and deworming treatment should be performed in advance.
-F.A.Q. about detention quarantine inspection is here
-Designated airports and seaports where import of dogs is allowed
-Dogs can be imported only through the following ports.
-（Airport）
-New Chitose airport, Narita international airport, Haneda airport, Chubu International airport, Kansai International airport, Osaka Itami airport, Kobe airport, Kitakyusyu airport, Fukuoka airport, Kagoshima airport, Naha airport
-（Seaport）
-Tomakomai seaport, Keihin seaport (Tokyo, Yokohama), Nagoya seaport, Hanshin seaport (Osaka, Hyogo), Kanmon seaport, Hakata seaport, Kagoshima seaport, Naha seaport
-If you import cats or come with your assistance dog (guide dogs, service dogs, and hearing dogs regulated by law in Japan) through a port other than listed above, please contact Animal Quarantine Service in advance.
+Dogs and cats scheduled to be detained for quarantine need advance vaccinations (combination vaccine) and deworming.
+F.A.Q. about detention for quarantine is here
+Designated airports and seaports where import of dogs are allowed
+Dogs can be imported only through the following 19 ports.
+Airports (11):
+New Chitose, Narita Intl., Tokyo Intl.(Haneda), Chubu Intl., Kansai Intl., Osaka Intl.(Itami), Kobe, Kitakyusyu, Fukuoka, Kagoshima and Naha
+Sea ports (8):
+Tomakomai, Keihin (Tokyo, Kawasaki, Yokohama), Nagoya, Hanshin (Osaka, Kobe), Kanmon, Hakata, Kagoshima and Naha
+If you import cats or come with your assistance dog (guide dogs, service dogs, and hearing dogs registered under the Japanese law) through a port other than listed above, please contact Animal Quarantine Service in advance.
 (Reference) Necessary procedures after import into Japan
-We cannot reissue the import quarantine certificate. You need to keep the certificate because it is necessary when you export the dog or cat that has been imported into Japan. If you are planning to export the dog or cat, please make early contact with Animal Quarantine Service at a port of departure.
-For dog’s importer, you need to bring the import quarantine certificate to the municipality, where the imported dog is kept, for registration within 30days of import.
-Dogs must be vaccinated against rabies once a year under the Rabies Prevention Law in Japan. For further information, contact the municipality office.
+Keep the import quarantine certificate of your dogs and cats, since it cannot be reissued. It becomes necessary when you export them. If you have a plan, please apply for inspection at least 14 days before export to the Animal Quarantine Service.
+Dogs must be registered in Japan. For registration, bring the import quarantine certificate to the municipality where the imported dog is kept, within 30 days of import.
+Dogs must be vaccinated against rabies once a year under the Rabies Prevention Act in Japan. For further information, contact the municipality office.
 The microchip number (currently only those in accordance with ISO standards) can be registered domestically with the import quarantine certificate. For further information, contact AIPO (Animal ID Promotion Organization).
 （AIPO office）TEL：03-3475-1695, FAX：03-3475-1697
-F.A.Q: Frequently-Asked Questions and Answers
-Contact list of Animal Quarantine Service at airport or seaport
+F.A.Q: Frequently-asked questions and answers
+Contacts of Animal Quarantine Service at airports and seaports
