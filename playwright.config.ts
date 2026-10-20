@@ -11,5 +11,7 @@ export default defineConfig({
     url: "http://localhost:3100",
     reuseExistingServer: !process.env.CI,
     timeout: 180_000,
+    // Next never overrides a variable that is already set, so this keeps codes in .env.local from gating the test server.
+    env: { PILOT_CODES: "" },
   },
 });
