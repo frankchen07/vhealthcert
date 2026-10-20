@@ -119,6 +119,60 @@ describe("rabies_series", () => {
   });
 });
 
+describe("rabies_series with a primary vaccination (EU-style)", () => {
+  const euSeries = rule(
+    "eu-rabies",
+    {
+      kind: "rabies_series",
+      count: 1,
+      minAgeDays: 84,
+      minIntervalDays: 0,
+      afterMicrochip: true,
+      requireContinuity: true,
+      primary: { waitDays: 21, validFor: { years: 1 } },
+    },
+    { leg: { to: ["FR"], from: ["US"] } },
+  );
+  const frLeg = leg({ to: "FR", departDate: "2026-10-20", arriveDate: "2026-10-21" });
+  const evalEu = (rabiesVaccinations: RabiesVaccinationInput[]) =>
+    evaluateCase(caseInput({ legs: [frLeg], animal: animal({ rabiesVaccinations }) }), kb([euSeries], { coverage: [{ to: "FR", from: ["US"] }] }), okStatus(), TODAY);
+
+  it("needs no wait after a booster given within the primary's validity", () => {
+    const r = req(evalEu([vax("2026-01-15"), vax("2026-10-05", 3)]), "eu-rabies");
+    expect(r.status).toBe("satisfied");
+  });
+
+  it("makes arrival wait 21 days after the primary vaccination", () => {
+    const result = evalEu([vax("2026-10-05")]);
+    const r = req(result, "eu-rabies");
+    expect(r.status).toBe("action_required");
+    expect(r.earliestArrival).toBe("2026-10-26");
+    expect(r.calc).toContainEqual({ label: "Primary vaccination valid from", expr: "Primary 2026-10-05 + 21 days", date: "2026-10-26" });
+    expect(result.legs[0].achievable).toBe(false);
+  });
+
+  it("limits a 3-year primary to 1 year, so a later dose starts a new primary", () => {
+    const result = evalEu([vax("2025-09-01", 3), vax("2026-10-05")]);
+    const r = req(result, "eu-rabies");
+    expect(r.findings.join(" ")).toMatch(/lapsed on 2026-09-01/);
+    expect(r.earliestArrival).toBe("2026-10-26");
+  });
+
+  it("plans a new primary when coverage has lapsed and pushes arrival 21 days past it", () => {
+    const r = req(evalEu([vax("2025-09-01", 3)]), "eu-rabies");
+    expect(r.status).toBe("action_required");
+    expect(r.actions[0].earliest).toBe(TODAY);
+    expect(r.earliestArrival).toBe("2026-10-30");
+  });
+
+  it("schedules a planned primary no later than 21 days before arrival", () => {
+    const laterLeg = leg({ to: "FR", departDate: "2026-11-29", arriveDate: "2026-11-30" });
+    const input = caseInput({ legs: [laterLeg], animal: animal({ rabiesVaccinations: [] }) });
+    const r = req(evaluateCase(input, kb([euSeries], { coverage: [{ to: "FR", from: ["US"] }] }), okStatus(), TODAY), "eu-rabies");
+    expect(r.actions[0].latest).toBe("2026-11-09");
+  });
+});
+
 describe("rabies_titer", () => {
   const vaccinated = [vax("2026-01-10"), vax("2026-02-09", 3)];
 

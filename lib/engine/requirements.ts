@@ -1,5 +1,5 @@
 import { cmp, daysFrom, describeDuration, maxDate, minus, pd, plus, type PlainDate } from "./dates";
-import type { AnimalInput, CalcStep, LegInput, PlannedAction, RequirementSpec, RequirementStatus } from "./types";
+import type { AnimalInput, CalcStep, DurationSpec, LegInput, PlannedAction, RequirementSpec, RequirementStatus } from "./types";
 
 export interface Dose {
   date: PlainDate;
@@ -40,6 +40,10 @@ const latestOf = (bounds: Bound[]): Bound => bounds.reduce((a, b) => (cmp(b[0], 
 const earliestOf = (bounds: Bound[]): Bound => bounds.reduce((a, b) => (cmp(b[0], a[0]) < 0 ? b : a));
 const planned = (d: PlainDate, projected: boolean) => `${d}${projected ? " (planned)" : ""}`;
 const coverageEnd = (doses: Dose[]): PlainDate => doses.reduce((end, d) => maxDate(end, d.validUntil), doses[0].validUntil);
+const asPrimary = (dose: Dose, validFor: DurationSpec): Dose => {
+  const cap = plus(dose.date, validFor);
+  return cmp(cap, dose.validUntil) < 0 ? { ...dose, validUntil: cap } : dose;
+};
 
 const cannot = (finding: string, calc: CalcStep[] = []): Evaluated => ({
   status: "cannot_determine",
@@ -116,7 +120,7 @@ function rabiesSeries(spec: Extract<RequirementSpec, { kind: "rabies_series" }>,
         current.push(dose);
       } else {
         if (current) findings.push(`Coverage lapsed on ${coverageEnd(current)} before the dose on ${dose.date}, so the series restarted.`);
-        chains.push([dose]);
+        chains.push([spec.primary ? asPrimary(dose, spec.primary.validFor) : dose]);
       }
     }
     chain = chains.at(-1) ?? [];
@@ -149,6 +153,9 @@ function rabiesSeries(spec: Extract<RequirementSpec, { kind: "rabies_series" }>,
     if (spec.afterMicrochip && ctx.chip) lower.push([ctx.chip.date, `Microchip ${planned(ctx.chip.date, ctx.chip.projected)}`]);
     const upper = [...deadline];
     if (spec.requireContinuity && doses.length) upper.push([coverageEnd(doses), `Current coverage ends ${coverageEnd(doses)}`]);
+    if (spec.primary && !doses.length) {
+      upper.push([minus(ctx.arrive, { days: spec.primary.waitDays }), `Arrival ${ctx.arrive} − ${spec.primary.waitDays} days (primary)`]);
+    }
 
     const earliest = latestOf(lower);
     actions.push(action(`Rabies vaccination — dose ${series.length + 1} of ${spec.count}`, earliest, earliestOf(upper)));
@@ -176,6 +183,15 @@ function rabiesSeries(spec: Extract<RequirementSpec, { kind: "rabies_series" }>,
     if (!actions.length && cmp(earliestArrival, ctx.arrive) > 0) {
       findings.push(`The most recent dose (${last.date}) is less than ${spec.minDaysBeforeArrival} days before arrival.`);
     }
+  }
+  if (spec.primary) {
+    const primary = doses[0];
+    const validFrom = plus(primary.date, { days: spec.primary.waitDays });
+    calc.push(step("Primary vaccination valid from", `Primary ${planned(primary.date, primary.projected)} + ${spec.primary.waitDays} days`, validFrom));
+    if (!actions.length && cmp(validFrom, ctx.arrive) > 0) {
+      findings.push(`The primary vaccination (${primary.date}) is not valid until ${validFrom}, after arrival.`);
+    }
+    earliestArrival = maxDate(earliestArrival, validFrom);
   }
 
   ctx.series = { doses: series, planned: doses };
@@ -294,8 +310,10 @@ function timedAction(ruleId: string, title: string, spec: Extract<RequirementSpe
   const anchor = spec.anchor === "departure" ? ctx.depart : ctx.arrive;
   const anchorLabel = `${spec.anchor === "departure" ? "Departure" : "Arrival"} ${anchor}`;
   const windowStart = spec.maxBefore ? minus(anchor, spec.maxBefore) : null;
-  const windowEnd = spec.minBefore ? minus(anchor, spec.minBefore) : anchor;
-  const endExpr = spec.minBefore ? `${anchorLabel} − ${describeDuration(spec.minBefore)}` : anchorLabel;
+  const anchorEnd = spec.minBefore ? minus(anchor, spec.minBefore) : anchor;
+  const byDeparture = spec.endBy === "departure" && cmp(ctx.depart, anchorEnd) < 0;
+  const windowEnd = byDeparture ? ctx.depart : anchorEnd;
+  const endExpr = byDeparture ? `Departure ${ctx.depart}` : spec.minBefore ? `${anchorLabel} − ${describeDuration(spec.minBefore)}` : anchorLabel;
   const deps = (spec.after ?? []).flatMap((id) => {
     const d = ctx.actionDates.get(id);
     return d ? [{ id, ...d }] : [];
@@ -326,6 +344,7 @@ function timedAction(ruleId: string, title: string, spec: Extract<RequirementSpe
 
   let earliestArrival = plus(notBefore[0], spec.minBefore ?? { days: 0 });
   if (spec.anchor === "departure") earliestArrival = plus(earliestArrival, { days: daysFrom(ctx.depart, ctx.arrive) });
+  if (spec.endBy === "departure") earliestArrival = maxDate(earliestArrival, plus(notBefore[0], { days: daysFrom(ctx.depart, ctx.arrive) }));
   const calc: CalcStep[] = [];
   if (cmp(earliestArrival, ctx.arrive) > 0) {
     findings.push(`The deadline (${windowEnd}) has already passed.`);
@@ -341,6 +360,8 @@ function breedRestriction(spec: Extract<RequirementSpec, { kind: "breed_restrict
   if (!breed) return cannot("Breed not entered.");
   const hit = spec.prohibited.find((p) => wholeWord(p).test(breed));
   if (hit) return { status: "not_permitted", findings: [`"${breed}" matches the prohibited type "${hit}".`], actions: [], calc: [] };
+  const conditional = spec.conditional?.find((p) => wholeWord(p).test(breed));
+  if (conditional) return cannot(`"${breed}" matches "${conditional}", which is prohibited only in some cases; see the rule.`);
   return {
     status: "satisfied",
     findings: [`"${breed}" does not match the listed prohibited types (${spec.prohibited.join(", ")}).`],

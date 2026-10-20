@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { buildLegs, factsNeeded, toCaseInput, validateTrip, type TripInput } from "@/lib/case/model";
+import { COVERED_DESTINATIONS } from "@/lib/case/places";
 import { KB } from "@/lib/kb";
 
 const trip = (overrides: Partial<TripInput> = {}): TripInput => ({
@@ -49,7 +50,19 @@ describe("buildLegs", () => {
   });
 });
 
+describe("destination choices", () => {
+  it("lists France first among covered destinations", () => {
+    expect(COVERED_DESTINATIONS[0]).toEqual({ code: "FR", name: "France" });
+    expect(COVERED_DESTINATIONS.map((d) => d.code)).toEqual(expect.arrayContaining(["JP", "US-HI"]));
+  });
+});
+
 describe("factsNeeded", () => {
+  it("asks for the breed but no titer or vaccine type for France", () => {
+    const needs = factsNeeded(KB, buildLegs(trip({ to: "FR" })), "dog");
+    expect(needs).toMatchObject({ birthDate: true, breed: true, microchip: true, rabies: true, vaccineType: false, titer: false });
+  });
+
   it("asks for titer details and vaccine type for Japan", () => {
     const needs = factsNeeded(KB, buildLegs(trip()), "dog");
     expect(needs).toMatchObject({ birthDate: true, rabies: true, vaccineType: true, titer: true, labReceipt: false });

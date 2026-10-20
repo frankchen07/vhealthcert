@@ -42,6 +42,25 @@ async function toPlan(page: Page) {
   await expect(page.getByRole("heading", { name: "Travel plan — veterinarian view" })).toBeVisible();
 }
 
+test("France is the first covered destination and a boosted dog's round trip needs no titer", async ({ page }) => {
+  await page.goto("/case/trip");
+  await expect(page.locator('#to optgroup[label="Covered"] option').first()).toHaveText("France");
+
+  const depart = today.add({ days: 30 });
+  await enterTrip(page, "FR", depart, depart.add({ days: 1 }), async (p) => {
+    await p.getByRole("checkbox", { name: "Returning home" }).click();
+    await p.getByLabel("Return departure").fill(iso(depart.add({ days: 21 })));
+    await p.getByLabel("Return arrival (local)").fill(iso(depart.add({ days: 21 })));
+  });
+  await enterVaccinatedDog(page);
+  await expect(page.getByRole("heading", { name: "Rabies antibody tests (FAVN)" })).toHaveCount(0);
+  await toPlan(page);
+
+  await expect(page.getByRole("region", { name: "Readiness" })).toContainText("Not ready");
+  await expect(page.getByRole("button", { name: /USDA APHIS endorsement \(original ink\)/ }).first()).toBeVisible();
+  await expect(page.getByRole("button", { name: /CDC Dog Import Form receipt/ }).first()).toBeVisible();
+});
+
 test("PRD §27: California → Japan in six weeks without a titer is not achievable, with the earliest compliant arrival", async ({ page }) => {
   const depart = today.add({ days: 41 });
   await enterTrip(page, "JP", depart, depart.add({ days: 1 }));

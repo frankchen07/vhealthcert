@@ -114,6 +114,15 @@ describe("breed_restriction", () => {
   it("cannot be determined without a breed", () => {
     expect(req(evaluateCase(caseInput({ animal: animal({ breed: "" }) }), kb([hybrids]), okStatus(), TODAY), "hybrids").status).toBe("cannot_determine");
   });
+
+  it("cannot be determined for a breed that is prohibited only under conditions the case does not record", () => {
+    const category1 = rule("cat1", { kind: "breed_restriction", prohibited: ["pit bull"], conditional: ["Tosa"], listIsExhaustive: false });
+    const evalBreed = (breed: string) => req(evaluateCase(caseInput({ animal: animal({ breed }) }), kb([category1]), okStatus(), TODAY), "cat1");
+    expect(evalBreed("Tosa Inu").status).toBe("cannot_determine");
+    expect(evalBreed("Tosa Inu").findings.join(" ")).toMatch(/Tosa/);
+    expect(evalBreed("Pit Bull mix").status).toBe("not_permitted");
+    expect(evalBreed("Beagle").status).toBe("satisfied");
+  });
 });
 
 describe("knowledge-base edge cases", () => {

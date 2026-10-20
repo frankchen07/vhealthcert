@@ -121,6 +121,57 @@ describe("California → Hawaii (Honolulu)", () => {
   });
 });
 
+describe("California → France → California", () => {
+  const roundTrip = [
+    { from: "US-CA", to: "FR", departDate: "2026-11-10", arriveDate: "2026-11-11" },
+    { from: "FR", to: "US-CA", departDate: "2026-12-01", arriveDate: "2026-12-01" },
+  ];
+
+  it("is achievable for a dog with a current booster, with certificate and endorsement windows", () => {
+    const result = evaluate({ legs: roundTrip });
+    expect(result.legs.map((l) => l.achievable)).toEqual([true, true]);
+    expect(result.readiness).toBe("not_ready");
+    expect(find(result, "eu-rabies-vaccination").status).toBe("satisfied");
+    expect(find(result, "eu-health-certificate").actions[0]).toMatchObject({ earliest: "2026-10-12", latest: "2026-11-10" });
+    expect(find(result, "eu-usda-endorsement").actions[0]).toMatchObject({ earliest: "2026-11-01", latest: "2026-11-10" });
+    expect(find(result, "fr-category-1-dogs").status).toBe("satisfied");
+    expect(find(result, "us-cdc-dog-import-form", 1).status).toBe("action_required");
+    expect(find(result, "us-aphis-dog-screwworm", 1).status).toBe("not_applicable");
+    expect(find(result, "ca-dog-rabies", 1).status).toBe("satisfied");
+  });
+
+  it("is not achievable two weeks after a puppy's primary vaccination", () => {
+    const result = evaluate({
+      legs: [{ from: "US-CA", to: "FR", departDate: "2026-10-16", arriveDate: "2026-10-17" }],
+      animal: dog({ birthDate: "2026-06-01", microchip: { status: "iso", implantDate: "2026-08-01" }, rabiesVaccinations: [vax("2026-10-02", 1)] }),
+    });
+    expect(result.readiness).toBe("not_achievable");
+    expect(result.legs[0].earliestCompliantArrival).toBe("2026-10-23");
+  });
+
+  it("blocks a pit bull", () => {
+    const result = evaluate({ legs: roundTrip, animal: dog({ breed: "Pit Bull mix" }) });
+    expect(result.readiness).toBe("not_permitted");
+  });
+
+  it("sends pedigree-dependent breeds to manual review instead of passing them", () => {
+    for (const breed of ["American Staffordshire Terrier", "Tosa Inu", "English Mastiff"]) {
+      const r = find(evaluate({ legs: roundTrip, animal: dog({ breed }) }), "fr-category-1-dogs");
+      expect(r.status, breed).toBe("cannot_determine");
+      expect(r.verification.state, breed).toBe("manual_review");
+    }
+    expect(find(evaluate({ legs: roundTrip, animal: dog({ breed: "Staffordshire Bull Terrier" }) }), "fr-category-1-dogs").status).toBe("satisfied");
+  });
+
+  it("applies only cat rules to a cat", () => {
+    const result = evaluate({ legs: roundTrip, animal: dog({ species: "cat" }) });
+    const ids = result.requirements.map((r) => r.ruleId);
+    expect(ids).not.toContain("eu-tapeworm");
+    expect(ids).not.toContain("fr-category-1-dogs");
+    expect(ids.filter((id) => !id.startsWith("eu-")).sort()).toEqual(["ca-cat-entry", "us-cdc-cat-healthy"]);
+  });
+});
+
 describe("cats and unsupported routes", () => {
   it("applies only cat rules on a cat's return from Japan", () => {
     const result = evaluate({

@@ -2,7 +2,7 @@
 
 Decision support for veterinarians preparing dogs and cats for travel. Each requirement in a plan is traceable to a quoted, re-verified official source, and anything uncertain is flagged for manual review instead of hidden.
 
-Prototype scope: personal pets, California → Japan → California, California → Hawaii (Honolulu) → California, and U.S. re-entry from Japan.
+Prototype scope: personal pets, California → France (EU) → California, California → Japan → California, California → Hawaii (Honolulu) → California, and U.S. re-entry from France and Japan.
 
 ## Run
 

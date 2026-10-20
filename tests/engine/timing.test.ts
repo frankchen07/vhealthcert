@@ -55,6 +55,29 @@ describe("timed_action", () => {
     expect(req(result, "endorse").actions[0].latest).toBe("2027-03-01");
   });
 
+  it("ends an arrival-anchored window at departure when the step must happen before the animal leaves", () => {
+    const euEndorse = rule("eu-endorse", { kind: "timed_action", anchor: "arrival", maxBefore: { days: 10 }, endBy: "departure" }, { performedBy: "usda" });
+    const r = req(evaluateCase(caseInput(), kb([euEndorse]), okStatus(), TODAY), "eu-endorse");
+    expect(r.actions[0].earliest).toBe("2027-02-20");
+    expect(r.actions[0].latest).toBe("2027-03-01");
+    expect(r.actions[0].calc).toContainEqual({ label: "Latest", expr: "Departure 2027-03-01", date: "2027-03-01" });
+  });
+
+  it("rejects a departure-bounded step recorded after departure", () => {
+    const euEndorse = rule("eu-endorse", { kind: "timed_action", anchor: "arrival", maxBefore: { days: 10 }, endBy: "departure" }, { performedBy: "usda" });
+    const legs = [leg({ departDate: "2026-10-07", arriveDate: "2026-10-09" })];
+    const r = req(evaluateCase(caseInput({ legs, completed: { "eu-endorse@0": "2026-10-08" } }), kb([euEndorse]), okStatus(), TODAY), "eu-endorse");
+    expect(r.status).toBe("action_required");
+    expect(r.findings.join(" ")).toMatch(/2026-10-08.*outside/);
+  });
+
+  it("pushes the earliest arrival by the travel time when a departure-bounded step is still pending", () => {
+    const euEndorse = rule("eu-endorse", { kind: "timed_action", anchor: "arrival", maxBefore: { days: 10 }, endBy: "departure" }, { performedBy: "usda" });
+    const legs = [leg({ departDate: "2026-10-08", arriveDate: "2026-10-09" })];
+    const r = req(evaluateCase(caseInput({ legs }), kb([euEndorse]), okStatus(), TODAY), "eu-endorse");
+    expect(r.earliestArrival).toBe("2026-10-10");
+  });
+
   it("accepts a dependent step as completed only on or after its completed prerequisite", () => {
     const legs = [leg({ departDate: "2026-10-15", arriveDate: "2026-10-16" })];
     const endorse = (completed: Record<string, string>) =>

@@ -115,6 +115,8 @@ export type RequirementSpec =
       requireContinuity: boolean;
       minDaysBeforeArrival?: number;
       acceptedTypes?: VaccineType[];
+      /** The first dose of the current continuous series is the primary: valid for at most `validFor`, and arrival waits `waitDays` after it. Boosters carry no wait. */
+      primary?: { waitDays: number; validFor: DurationSpec };
     }
   | {
       kind: "rabies_titer";
@@ -134,8 +136,9 @@ export type RequirementSpec =
       minBefore?: DurationSpec;
       maxBefore?: DurationSpec;
       after?: string[];
+      endBy?: "departure";
     }
-  | { kind: "breed_restriction"; prohibited: string[]; listIsExhaustive: boolean }
+  | { kind: "breed_restriction"; prohibited: string[]; conditional?: string[]; listIsExhaustive: boolean }
   | { kind: "informational" };
 
 export interface Rule {
