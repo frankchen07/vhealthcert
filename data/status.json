@@ -1,112 +1,112 @@
 {
   "aphis-dog-disease-status": {
-    "lastAttempt": "2026-10-24T16:19:59.532Z",
-    "lastOk": "2026-10-24T16:19:59.532Z",
+    "lastAttempt": "2026-10-25T16:54:09.554Z",
+    "lastOk": "2026-10-25T16:54:09.554Z",
     "ok": true,
     "hash": "a5f6ecd9abef3a9d",
     "missingExcerpts": []
   },
   "aphis-dog-import": {
-    "lastAttempt": "2026-10-24T16:19:59.532Z",
-    "lastOk": "2026-10-24T16:19:59.532Z",
+    "lastAttempt": "2026-10-25T16:54:09.554Z",
+    "lastOk": "2026-10-25T16:54:09.554Z",
     "ok": true,
     "hash": "50ec73b47aae8c70",
     "missingExcerpts": []
   },
   "aphis-us-to-france": {
-    "lastAttempt": "2026-10-24T16:19:59.532Z",
-    "lastOk": "2026-10-24T16:19:59.532Z",
+    "lastAttempt": "2026-10-25T16:54:09.554Z",
+    "lastOk": "2026-10-25T16:54:09.554Z",
     "ok": true,
     "hash": "af2204586ab9a296",
     "missingExcerpts": []
   },
   "aphis-us-to-japan": {
-    "lastAttempt": "2026-10-24T16:19:59.532Z",
-    "lastOk": "2026-10-24T16:19:59.532Z",
+    "lastAttempt": "2026-10-25T16:54:09.554Z",
+    "lastOk": "2026-10-25T16:54:09.554Z",
     "ok": true,
     "hash": "3706907b25a94368",
     "missingExcerpts": []
   },
   "cdc-bringing-animals": {
-    "lastAttempt": "2026-10-24T16:19:59.532Z",
-    "lastOk": "2026-10-24T16:19:59.532Z",
+    "lastAttempt": "2026-10-25T16:54:09.554Z",
+    "lastOk": "2026-10-25T16:54:09.554Z",
     "ok": true,
     "hash": "851f24c8c12a9acd",
     "missingExcerpts": []
   },
   "cdc-dogs-high-risk-list": {
-    "lastAttempt": "2026-10-24T16:19:59.532Z",
-    "lastOk": "2026-10-24T16:19:59.532Z",
+    "lastAttempt": "2026-10-25T16:54:09.554Z",
+    "lastOk": "2026-10-25T16:54:09.554Z",
     "ok": true,
     "hash": "8367f258407b082f",
     "missingExcerpts": []
   },
   "cdc-dogs-low-risk": {
-    "lastAttempt": "2026-10-24T16:19:59.532Z",
-    "lastOk": "2026-10-24T16:19:59.532Z",
+    "lastAttempt": "2026-10-25T16:54:09.554Z",
+    "lastOk": "2026-10-25T16:54:09.554Z",
     "ok": true,
     "hash": "eb296f1fec560781",
     "missingExcerpts": []
   },
   "cdfa-entry": {
-    "lastAttempt": "2026-10-24T16:19:59.532Z",
-    "lastOk": "2026-10-24T16:19:59.532Z",
+    "lastAttempt": "2026-10-25T16:54:09.554Z",
+    "lastOk": "2026-10-25T16:54:09.554Z",
     "ok": true,
     "hash": "839d7c297a914fd1",
     "missingExcerpts": []
   },
   "cdfa-transport-guide": {
-    "lastAttempt": "2026-10-24T16:19:59.532Z",
-    "lastOk": "2026-10-24T16:19:59.532Z",
+    "lastAttempt": "2026-10-25T16:54:09.554Z",
+    "lastOk": "2026-10-25T16:54:09.554Z",
     "ok": true,
     "hash": "60686d8085f858b2",
     "missingExcerpts": []
   },
   "cdph-pet-import": {
-    "lastAttempt": "2026-10-24T16:19:59.532Z",
-    "lastOk": "2026-10-24T16:19:59.532Z",
+    "lastAttempt": "2026-10-25T16:54:09.554Z",
+    "lastOk": "2026-10-25T16:54:09.554Z",
     "ok": true,
     "hash": "d7fa839ed115c4ab",
     "missingExcerpts": []
   },
   "ec-pets-listed-countries": {
-    "lastAttempt": "2026-10-24T16:19:59.532Z",
-    "lastOk": "2026-10-24T16:19:59.532Z",
+    "lastAttempt": "2026-10-25T16:54:09.554Z",
+    "lastOk": "2026-10-25T16:54:09.554Z",
     "ok": true,
     "hash": "6581df11d7984685",
     "missingExcerpts": []
   },
   "ec-pets-non-eu": {
-    "lastAttempt": "2026-10-24T16:19:59.532Z",
-    "lastOk": "2026-10-24T16:19:59.532Z",
+    "lastAttempt": "2026-10-25T16:54:09.554Z",
+    "lastOk": "2026-10-25T16:54:09.554Z",
     "ok": true,
     "hash": "a7df6f3e66cc7366",
     "missingExcerpts": []
   },
   "fr-sp-dog-categories": {
-    "lastAttempt": "2026-10-24T16:19:59.532Z",
-    "lastOk": "2026-10-24T16:19:59.532Z",
+    "lastAttempt": "2026-10-25T16:54:09.554Z",
+    "lastOk": "2026-10-25T16:54:09.554Z",
     "ok": true,
     "hash": "df40b2be93b1648c",
     "missingExcerpts": []
   },
   "hdoa-aqs-info": {
-    "lastAttempt": "2026-10-24T16:19:59.532Z",
-    "lastOk": "2026-10-24T16:19:59.532Z",
+    "lastAttempt": "2026-10-25T16:54:09.554Z",
+    "lastOk": "2026-10-25T16:54:09.554Z",
     "ok": true,
     "hash": "290aebf80695abd9",
     "missingExcerpts": []
   },
   "hdoa-checklist-1": {
-    "lastAttempt": "2026-10-24T16:19:59.532Z",
-    "lastOk": "2026-10-24T16:19:59.532Z",
+    "lastAttempt": "2026-10-25T16:54:09.554Z",
+    "lastOk": "2026-10-25T16:54:09.554Z",
     "ok": true,
     "hash": "ae968c4e57cc459d",
     "missingExcerpts": []
   },
   "jp-aqs-nondesignated": {
-    "lastAttempt": "2026-10-24T16:19:59.532Z",
-    "lastOk": "2026-10-24T16:19:59.532Z",
+    "lastAttempt": "2026-10-25T16:54:09.554Z",
+    "lastOk": "2026-10-25T16:54:09.554Z",
     "ok": true,
     "hash": "e3476c575772dda2",
     "missingExcerpts": [
